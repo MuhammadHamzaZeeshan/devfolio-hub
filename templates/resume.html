@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-wrapper">
+    <h1 class="section-header">Skills</h1>
+    <ol>
+        {% for skill in skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ol>
+
+    <h1 class="section-header">Experience</h1>
+    {% for exp in experience %}
+    <div class="experience-card">
+        <h3>{{ exp.role }}</h3>
+        <div class="company">{{ exp.company }}</div>
+        <div class="duration">{{ exp.duration }}</div>
+        <div class="description">{{ exp.description }}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
